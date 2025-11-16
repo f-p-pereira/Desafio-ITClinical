@@ -1,31 +1,39 @@
 # Desafio ITClinical
+Este projeto foi desenvolvido como resposta ao desafio técnico proposto pela ITClinical, utilizando uma abordagem Test-Driven Development (TDD) em Python.
 
-O desafio técnico proposto pela ITClinical, que consiste em:
 
-- Criar um programa em Python que, dado um texto, retorna cada N-ésimo carácter maiúsculo.
-- Utilizar **Test-Driven Development (TDD)** para desenvolver a solução.
-- Tratar casos limite, como N ≤ 0, texto vazio ou N maior que o comprimento do texto.
+## Objetivo do Desafio
+Implementar uma função que, dado um texto e um valor N, devolve todos os caracteres maiúsculos que surgem a cada N posições no texto.
 
-Exemplo:
- - Texto = "ITCLiNicAl" and N = 1, the return value will be "ITCLNA";
- - Texto = "ITCLiNicAl" and N = 2, the return value will be "TLN";
- - Texto = "ITCLiNicAl" and N = 3, the return value will be "CNA";
- - Texto = "ITCLiNicAl" and N = 100, the return value will be ""; ==> N > len(Texto) = ""
- - Texto = "ITCLiNicAl" and N = -1, the return value will be "";
+Exemplos:
+| Texto        | N   | Resultado         |
+| ------------ | --- | ----------------- |
+| `ITCLiNicAl` | 1   | `ITCLNA`          |
+| `ITCLiNicAl` | 2   | `TLN`             |
+| `ITCLiNicAl` | 3   | `CNA`             |
+| `ITCLiNicAl` | 100 | `` (vazio)        |
+| `ITCLiNicAl` | -1  | erro (N inválido) |
 
-O objetivo deste projeto é demonstrar organização do código, testes unitários e boas práticas no uso de Git/GitHub.
 
-## TDD (Test-Driven Development)
+## Abordagem: TDD (Test-Driven Development)
+Este projeto segue as três fases fundamentais do TDD:
 
-Este projeto segue a metodologia TDD (Test-Driven Development), que consiste em:
+1. **Red**
 
-1. **Red**: Escrever testes que inicialmente falham, definindo o comportamento esperado.
-2. **Green**: Implementar o código mínimo necessário para que os testes passem.
-3. **Refactor**: Melhorar o código mantendo todos os testes a passar.
+   - Escrevem-se testes antes de existir código funcional.
+   - O teste falha (como esperado).
 
-Vantagens desta abordagem incluem:
-- Código confiável e menos propenso a bugs
-- Design mais claro e modular
-- Facilidade para refatorar sem medo de quebrar funcionalidades
+2. **Green**
 
-No desenvolvimento deste desafio, cada funcionalidade da função `nth_upper` foi primeiro testada antes de ser implementada.
+   - Escreve-se o código mínimo necessário para que os testes passem.
+   - O foco aqui é funcionalidade, não otimização.
+
+3. **Refactor**
+
+   Melhorias ao código:
+   - legibilidade  
+   - clareza  
+   - documentação  
+   - simplificação  
+
+   Os testes garantem que nada foi quebrado.
