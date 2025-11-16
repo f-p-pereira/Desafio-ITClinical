@@ -21,3 +21,13 @@ def test_nth_upper_n1():
     assert nth_upper(text, n) == expected
 
 
+def test_nth_upper_n2():
+    """
+    Teste TDD: N = 2, deve retornar cada 2º carácter maiúsculo do texto
+    """
+    text = "ITCLiNicAl"
+    n = 2
+    expected = "TLN"
+    assert nth_upper(text, n) == expected
+
+

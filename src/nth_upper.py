@@ -14,6 +14,10 @@ def nth_upper(text: str, n: int) -> str:
     if n <= 0 or not text:
         return ""
     
-    # Filtra todas as maiúsculas
-    return "".join([c for c in text if c.isupper()])
+    result = []
+    for i in range(n-1, len(text), n):  # começa na posição N-1 e pula N cada vez
+        if text[i].isupper():
+            result.append(text[i])
+
+    return "".join(result)
 
